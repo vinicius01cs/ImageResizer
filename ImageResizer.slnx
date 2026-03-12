@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="ImageResizer.Worker/ImageResizer.Worker.csproj" Id="422708a8-8da2-4963-a63f-209b7e565b96" />
   <Project Path="ImageResizer/ImageResizer.csproj" />
 </Solution>
