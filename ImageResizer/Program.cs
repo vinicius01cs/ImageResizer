@@ -1,3 +1,4 @@
+using ImageResizer;
 using ImageResizer.Features.Image;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddScoped<IImageServices, ImagesServices>();
 builder.Services.AddOpenApi();
+builder.Services.AddSingleton<RabbitMQPublisher>();
 
 var app = builder.Build();
 
@@ -14,6 +16,7 @@ if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
+
 
 app.UseHttpsRedirection();
 
